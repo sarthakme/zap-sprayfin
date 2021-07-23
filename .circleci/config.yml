@@ -14,13 +14,17 @@ jobs:
             # install dependencies in both apps
             - run:
                 name: install-ui
-                command: npm run frontend:install
+                command: |
+                    npm run frontend:install
             -run:
                 name: install-server
-                command: npm run backend:install
+                command: |
+                    npm run backend:install
             -run:
                 name: build-ui
-                command: npm run frontend:build
+                command: |
+                    npm run frontend:build
             -run:
                 name: build-server
-                command: npm run backend:build
+                command: |
+                    npm run backend:build
